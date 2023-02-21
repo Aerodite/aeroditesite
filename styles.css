@@ -167,7 +167,7 @@ nav img{
 }
 
 .stars {
-    background: #020039 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+    background: #000000 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
     position: absolute;
     top: 0;
     bottom: 0;
