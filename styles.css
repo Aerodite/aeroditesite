@@ -181,7 +181,7 @@ nav img{
 
 .twinkling{
     width:5000px;
-    background: transparent url("https://media.discordapp.net/attachments/854673238327951363/1074879415424667689/twinkling.png") repeat;
+    background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
     background-size: 1000px 1000px;
     position: absolute;
     right: 0;
