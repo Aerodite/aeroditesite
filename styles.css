@@ -238,7 +238,7 @@ nav img{
     height: 150px;
     width: 500px;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.63);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     outline: none;
     font-size: 50px;
     font-weight: 100;
@@ -260,7 +260,7 @@ nav img{
     transition: transform 0.5s ease;
 }
 .btn:hover {
-    box-shadow: -10px 10px 25px 0 rgba(255, 255, 255, 0.5), -10px 10px 25px 0 rgba(0, 157, 255, 0.5);}
+    box-shadow: -10px 10px 25px 0 rgba(0, 76, 255, 0.5), -10px 10px 25px 0 rgba(201, 39, 2, 0.5);}
 .btn2:hover {
     transition: 1s ease-in-out;
 }
@@ -277,7 +277,7 @@ nav img{
     height: 150px;
     width: 500px;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.63);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     outline: none;
     font-size: 50px;
     font-weight: 100;
@@ -299,7 +299,7 @@ nav img{
     transition: transform 0.5s ease;
 }
 .btn2:hover {
-    box-shadow: 10px 10px 25px 0 rgba(255, 255, 255, 0.5), 10px 10px 25px 0 rgba(0, 157, 255, 0.5);
+    box-shadow: 10px 10px 25px 0 rgba(4, 68, 100, 0.5), 10px 10px 25px 0 rgba(18, 101, 210, 0.5);
 }
 @media(max-width: 1700px) {
     .btn{
