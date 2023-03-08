@@ -1,0 +1,218 @@
+﻿
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    /* Seriously, DO NOT TOUCH THIS OVERFLOW HIDDEN */
+    overflow : hidden;
+}
+nav{
+    display: flex;
+    padding: 0 2%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 6;
+}
+nav img{
+    width: 325px;
+    overflow : hidden;
+    z-index: 6;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    z-index: 6;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0px 4px;
+    position: relative;
+    z-index: 6;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 33px;
+    z-index: 6;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0;
+    height: 4px;
+    background: #0d44aa;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    z-index: 6;
+}
+.nav-links ul li:hover::after{
+    width: 100%;}
+@media(max-width: 1000px){
+    .text-box h1{
+        font-size: 24px
+    }
+    .btn {
+        border-radius:7%;
+        max-width: 100%;}
+    .btn2 {
+        border-radius:7%;
+        max-width: 100%;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links {
+        position: fixed;
+        background: #011237;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 6;
+        transition: 0.60s;
+    }
+    .image{}
+    .overlay{}
+}
+@media(max-width: 1000px) {
+    .text-box p {
+        font-size: 15px;
+    }
+
+    nav img {
+        position: absolute;
+        width: 65%;
+        top: 10px;
+        margin-left: 15%;
+
+    }
+
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 24px;
+        cursor: pointer;
+
+    }
+    .nav-links ul {
+        padding: 30px;
+
+    }
+}
+
+
+@keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+@-webkit-keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+@-moz-keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+@-webkit-keyframes move-background {
+
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+.background-container{
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.stars {
+    background: #000000 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 0;
+    overflow: hidden;
+
+}
+
+.twinkling{
+    width:3500px;
+    background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+
+
+    -moz-animation:move-background 45s linear infinite;
+    -ms-animation:move-background 45s linear infinite;
+    -o-animation:move-background 45s linear infinite;
+    -webkit-animation:move-background 45s linear infinite;
+    animation:move-background 45s linear infinite;
+}
+
+
+.image {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    display: block;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    z-index:4;
+    display:block;
+}
