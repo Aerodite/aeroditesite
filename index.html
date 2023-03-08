@@ -20,30 +20,27 @@
         <div class="image" style="">
         <a href="index.html"><img src="https://media.discordapp.net/attachments/854673238327951363/1062285837087277107/aerodite.tech.png"></a>
         </div>
+
         <div class="overlay" style="">
             <a href="index.html"><img src="https://media.discordapp.net/attachments/854673238327951363/1074863043516833792/aerodite.techclear.png"></a>
         </div>
-            <div class="nav-links" id="navLinks">
-            <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
-            <ul>
-                <li><a href="https://blog.aerodite.tech">Blog</a></li>
-            </ul>
+
+        <div>
+        <button type="button" class="btn" onclick="window.location.href='https://blog.aerodite.tech/';">
+            <a href="">Blog</a>
+        </button>
         </div>
-        <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+
+        <div>
+        <button type="button" class="btn2" onclick="window.location.href='https://aerodite.tech/origins';">
+            <a href="/origins.html">Minecraft Server</a>
+        </button>
+        </div>
     </nav>
 
     <div class="stars" style=" float: right;"></div>
     <div class="twinkling" style=" float: right;"></div>
 </section>
-<script>
-    var navLinks = document.getElementById("navLinks");
-    function showMenu(){
-        navLinks.style.right = "0";
-    }
-    function hideMenu(){
-        navLinks.style.right = "-200px";
-    }
 
-</script>
 </body>
 </html>
