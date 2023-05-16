@@ -17,12 +17,25 @@
 <body>
 <section class="header" style=" float: right;">
     <nav>
+        <div class="toggle-mode" id="modeToggle">
+            <i class="fa fa-toggle-on" onclick="hideMenu()"></i>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+        <!-- Leave this for later mobile compatibility
+    <script>
+        function modeToggle() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        }
+        </script> -->
         <div class="image" style="">
-        <a href="index.html"><img src="https://media.discordapp.net/attachments/854673238327951363/1062285837087277107/aerodite.tech.png"></a>
+        <a href="index.html"><img src="https://raw.githubusercontent.com/Aerodite/aeroditesite/website-elements/aerodite.tech.png"></a>
         </div>
 
         <div class="overlay" style="">
-            <a href="index.html"><img src="https://media.discordapp.net/attachments/854673238327951363/1074863043516833792/aerodite.techclear.png"></a>
+            <a href="index.html"><img src="https://raw.githubusercontent.com/Aerodite/aeroditesite/website-elements/aerodite.techclear.png"></a>
         </div>
 
         <div>
@@ -33,7 +46,7 @@
 
         <div>
         <button type="button" class="btn2" onclick="window.location.href='https://aerodite.tech/ethereal';">
-            <a href="/ethereal.html">Minecraft Server</a>
+            <a href="/ethereal.html">Server</a>
         </button>
         </div>
     </nav>

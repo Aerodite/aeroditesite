@@ -164,7 +164,8 @@ nav img{
         -webkit-transform: translate3d(1000px, 0px, 0px);
     }
 }
-
+/* I will keep this here temporarily, I want to see if I can improve on it later :)
+/*
 .background-container{
     position: fixed;
     top: 0;
@@ -204,7 +205,7 @@ nav img{
     -webkit-animation:move-background 45s linear infinite;
     animation:move-background 45s linear infinite;
 }
-
+*/
 
 .image {
     padding-top: 8%;
@@ -224,7 +225,18 @@ nav img{
 .btn:hover {
     transition: 1s ease-in-out;
 }
-
+/* Leave this for later mobile compatitiblity.
+body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+}
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+*/
 .btn{
     z-index:9;
     position:fixed;
