@@ -1,5 +1,30 @@
-﻿@import "https://unpkg.com/open-props/easings.min.css";
+﻿/* the props */
 @import "https://unpkg.com/open-props";
+
+/* optional imports that use the props */
+@import "https://unpkg.com/open-props/normalize.min.css";
+@import "https://unpkg.com/open-props/buttons.min.css";
+
+/* just dark or light themes */
+@import "https://unpkg.com/open-props/normalize.dark.min.css";
+@import "https://unpkg.com/open-props/buttons.dark.min.css";
+@import "https://unpkg.com/open-props/normalize.light.min.css";
+@import "https://unpkg.com/open-props/buttons.light.min.css";
+
+/* individual imports */
+@import "https://unpkg.com/open-props/indigo.min.css";
+@import "https://unpkg.com/open-props/indigo-hsl.min.css";
+@import "https://unpkg.com/open-props/easings.min.css";
+@import "https://unpkg.com/open-props/animations.min.css";
+@import "https://unpkg.com/open-props/sizes.min.css";
+@import "https://unpkg.com/open-props/gradients.min.css";
+/* see PropPacks for the full list */
+:where(html){
+    --animation-ease-out-5:ease-out-5;
+    --animation-shake-y: shake-y .75s;
+    --icon-fill: icon-fill;
+    --icon-fill-hover: icon-fill-hover;
+}
 *{
     margin: 0;
     padding: 0;
@@ -94,7 +119,7 @@ a:hover { text-decoration: none; }
 
 a:active { text-decoration: none; }
 a{
-    color: #ffffff;
+    color: color(invert);
     text-decoration: none;
 }
 .header{
@@ -195,7 +220,7 @@ nav img{
 
     nav .fa {
         display: block;
-        color: #fff;
+        color: #ffffff;
         margin: 10px;
         font-size: 24px;
         cursor: pointer;
@@ -223,36 +248,33 @@ nav img{
     display:block;
 }
 .btn:hover {
+    animation:
+            var(--animation-shake-y);
     transition: 1s ease-in-out;
 }
 
 .btn{
     z-index:9;
-    position:fixed;
-    left: 35%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    position:absolute;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     color: white;
     background-color: transparent;
     height: 150px;
     width: 500px;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    border: 2px solid rgb(8, 47, 173);
     outline: none;
     font-size: 50px;
     font-weight: 100;
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 0 0 0 rgba(255, 255, 255, 0);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 .btn::after{
-    position: fixed;
-    left: 35%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    position:absolute;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     z-index:8;
     content:"";
     width: 500px;
@@ -260,38 +282,28 @@ nav img{
     background-color: transparent;
     transition: transform 0.5s ease;
 }
-.btn:hover {
-    box-shadow: -10px 10px 25px 0 rgba(0, 76, 255, 0.5), -10px 10px 25px 0 rgba(201, 39, 2, 0.5);}
-.btn2:hover {
-    transition: 1s ease-in-out;
-}
+
 .btn2{
     z-index:9;
-    position: fixed;
-    left: 65%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    position:absolute;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     color: white;
     background-color: transparent;
     height: 150px;
     width: 500px;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    border: 2px solid rgb(8, 47, 173);
     outline: none;
     font-size: 50px;
     font-weight: 100;
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 0 0 0 rgba(255, 255, 255, 0);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .btn2::after{
-    position: fixed;
-    left: 65%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    position:absolute;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     z-index:8;
     content:"";
     width: 500px;
@@ -299,24 +311,22 @@ nav img{
     background-color: transparent;
     transition: transform 0.5s ease;
 }
-.btn2:hover {
-    box-shadow: 10px 10px 25px 0 rgba(4, 68, 100, 0.5), 10px 10px 25px 0 rgba(18, 101, 210, 0.5);
+.btn2:hover{
+    animation:
+            var(--animation-shake-y);
 }
 @media(max-width: 1700px) {
     .btn{
-        position: absolute;
-        left: 50%;
-        top: 70%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+        position:absolute;
+        align-items: center;
+        display: flex;
+        justify-content: center;
     }
+
     .btn2{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+        position:absolute;
+        align-items: center;
+        display: flex;
+        justify-content: center;
     }
 }
