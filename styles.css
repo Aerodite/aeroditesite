@@ -1,24 +1,17 @@
-﻿/* the props */
-@import "https://unpkg.com/open-props";
-
-/* optional imports that use the props */
+﻿@import "https://unpkg.com/open-props";
 @import "https://unpkg.com/open-props/normalize.min.css";
 @import "https://unpkg.com/open-props/buttons.min.css";
-
-/* just dark or light themes */
 @import "https://unpkg.com/open-props/normalize.dark.min.css";
 @import "https://unpkg.com/open-props/buttons.dark.min.css";
 @import "https://unpkg.com/open-props/normalize.light.min.css";
 @import "https://unpkg.com/open-props/buttons.light.min.css";
-
-/* individual imports */
 @import "https://unpkg.com/open-props/indigo.min.css";
 @import "https://unpkg.com/open-props/indigo-hsl.min.css";
 @import "https://unpkg.com/open-props/easings.min.css";
 @import "https://unpkg.com/open-props/animations.min.css";
 @import "https://unpkg.com/open-props/sizes.min.css";
 @import "https://unpkg.com/open-props/gradients.min.css";
-/* see PropPacks for the full list */
+@import "https://www.unpkg.com/browse/easings@1.1.1/index.css";
 :where(html){
     --animation-ease-out-5:ease-out-5;
     --animation-shake-y: shake-y .75s;
@@ -30,7 +23,12 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-
+:where(html){
+    --ease-elastic-3: ease-elastic-3;
+    --ease-elastic-4: ease-elastic-4;
+    --ease-3: ease-3;
+    --ease-out-5: ease-out-5;
+}
 .sun-and-moon > :is(.moon, .sun, .sun-beams) {
     transform-origin: center;
 }
@@ -150,7 +148,6 @@ nav img{
     z-index: 6;
 }
 .nav-links ul li{
-  padding-top: 5%;
     list-style: none;
     display: inline-block;
     padding: 0px 4px;
@@ -177,6 +174,7 @@ nav img{
 }
 .nav-links ul li:hover::after{
     width: 100%;}
+
 @media(max-width: 1000px){
     .text-box h1{
         font-size: 24px
@@ -256,9 +254,8 @@ nav img{
 .btn{
     z-index:9;
     position:absolute;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    top:30%;
+    left:35%;
     color: white;
     background-color: transparent;
     height: 150px;
@@ -274,7 +271,6 @@ nav img{
     position:absolute;
     align-items: center;
     display: flex;
-    justify-content: center;
     z-index:8;
     content:"";
     width: 500px;
@@ -286,9 +282,8 @@ nav img{
 .btn2{
     z-index:9;
     position:absolute;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    top:50%;
+    left:35%;
     color: white;
     background-color: transparent;
     height: 150px;
@@ -318,15 +313,11 @@ nav img{
 @media(max-width: 1700px) {
     .btn{
         position:absolute;
-        align-items: center;
-        display: flex;
-        justify-content: center;
+        left:17%;
     }
 
     .btn2{
         position:absolute;
-        align-items: center;
-        display: flex;
-        justify-content: center;
+        left:17%;
     }
 }
