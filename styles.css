@@ -29,82 +29,9 @@
     --ease-3: ease-3;
     --ease-out-5: ease-out-5;
 }
-.sun-and-moon > :is(.moon, .sun, .sun-beams) {
-    transform-origin: center;
+body {
+    background-color: #000000;
 }
-
-.sun-and-moon > :is(.moon, .sun) {
-    fill: var(--icon-fill);
-}
-
-.theme-toggle:is(:hover, :focus-visible) > .sun-and-moon > :is(.moon, .sun) {
-    fill: var(--icon-fill-hover);
-}
-
-.sun-and-moon > .sun-beams {
-    stroke: var(--icon-fill);
-    stroke-width: 2px;
-}
-
-.theme-toggle:is(:hover, :focus-visible) .sun-and-moon > .sun-beams {
-    stroke: var(--icon-fill-hover);
-}
-
-[data-theme="dark"] .sun-and-moon > .sun {
-    transform: scale(1.75);
-}
-
-[data-theme="dark"] .sun-and-moon > .sun-beams {
-    opacity: 0;
-}
-
-[data-theme="dark"] .sun-and-moon > .moon > circle {
-    transform: translateX(-7px);
-}
-
-@supports (cx: 1) {
-    [data-theme="dark"] .sun-and-moon > .moon > circle {
-        cx: 17;
-        transform: translateX(0);
-    }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .sun-and-moon > .sun {
-        transition: transform .5s var(--ease-elastic-3);
-    }
-
-    .sun-and-moon > .sun-beams {
-        transition: transform .5s var(--ease-elastic-4), opacity .5s var(--ease-3);
-    }
-
-    .sun-and-moon .moon > circle {
-        transition: transform .25s var(--ease-out-5);
-    }
-
-    @supports (cx: 1) {
-        .sun-and-moon .moon > circle {
-            transition: cx .25s var(--ease-out-5);
-        }
-    }
-
-    [data-theme="dark"] .sun-and-moon > .sun {
-        transition-timing-function: var(--ease-3);
-        transition-duration: .25s;
-        transform: scale(1.75);
-    }
-
-    [data-theme="dark"] .sun-and-moon > .sun-beams {
-        transition-duration: .15s;
-        transform: rotateZ(-25deg);
-    }
-
-    [data-theme="dark"] .sun-and-moon > .moon > circle {
-        transition-duration: .5s;
-        transition-delay: .25s;
-    }
-}
-
 
 a:link { text-decoration: none; }
 
@@ -136,6 +63,9 @@ nav{
     align-items: center;
     z-index: 6;
 }
+.nav-links ul li{
+    display: block;
+}
 nav img{
     width: 325px;
     overflow : hidden;
@@ -150,13 +80,13 @@ nav img{
 .nav-links ul li{
     list-style: none;
     display: inline-block;
-    padding: 0px 4px;
+    padding: 0 4px;
     position: relative;
     z-index: 6;
 }
 .nav-links ul li a{
-  padding-top: 5%;
-    color: #fff;
+  padding-top: 3%;
+    color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 33px;
@@ -166,7 +96,7 @@ nav img{
     content: '';
     width: 0;
     height: 4px;
-    background: #0d44aa;
+    background: #ffffff;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -191,7 +121,7 @@ nav img{
     .nav-links {
       padding-top: 5%;
         position:fixed;
-        background: #011237;
+        background: #ffffff;
         height: 100vh;
         width: 200px;
         top: 0;
@@ -215,7 +145,34 @@ nav img{
         margin-left: 15%;
 
     }
-
+    .nav-links{
+        flex: 1;
+        text-align: right;
+    }
+    .nav-links ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 0 6px;
+        position: relative;
+    }
+    .nav-links ul li a{
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+    .nav-links ul li::after{
+        content: '';
+        width: 0;
+        height: 4px;
+        background: #ff9100;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+    }
+    .nav-links ul li:hover::after{
+        width: 100%;
+    }
     nav .fa {
         display: block;
         color: #ffffff;
@@ -231,7 +188,7 @@ nav img{
 }
 
 .image {
-    padding-top: 8%;
+    padding-top: 5%;
     position: absolute;
     width: 100%;
     z-index: 2;
@@ -239,7 +196,7 @@ nav img{
 }
 
 .overlay{
-  padding-top: 8%;
+  padding-top: 5%;
     position:absolute;
     width:100%;
     z-index:4;
@@ -261,7 +218,7 @@ nav img{
     height: 150px;
     width: 500px;
     cursor: pointer;
-    border: 2px solid rgb(8, 47, 173);
+    border: 2px solid rgb(255, 255, 255);
     outline: none;
     font-size: 50px;
     font-weight: 100;
@@ -289,7 +246,7 @@ nav img{
     height: 150px;
     width: 500px;
     cursor: pointer;
-    border: 2px solid rgb(8, 47, 173);
+    border: 2px solid rgb(255, 255, 255);
     outline: none;
     font-size: 50px;
     font-weight: 100;
