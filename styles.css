@@ -1,333 +1,180 @@
-﻿
-*{
+﻿:root{
+    font-size:  16px;
+    font-family: 'Poppins', sans-serif;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --bg-trinary: #3a3a52;
+    --transition-speed: 600ms;
+}
+
+body{
+    color:black;
+    background-color: var(--bg-trinary);
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
 }
-a:link { text-decoration: none; }
+
+body::-webkit-scrollbar{
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track{
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #6649b8;
+}
 
 
-a:visited { text-decoration: none; }
+main{
+    margin-left: 5rem;
+    padding: 1rem;
+}
 
+.navbar{
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 200ms ease;
+}
 
-a:hover { text-decoration: none; }
-
-
-a:active { text-decoration: none; }
-a{
-    color: #ffffff;
-    text-decoration: none;
-}
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    /* Seriously, DO NOT TOUCH THIS OVERFLOW HIDDEN */
-    overflow : hidden;
-}
-nav{
-    display: flex;
-    padding: 0 2%;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 6;
-}
-nav img{
-    width: 325px;
-    overflow : hidden;
-    z-index: 6;
-}
-.nav-links{
-  padding-top: 2%;
-    flex: 1;
-    text-align: right;
-    z-index: 6;
-}
-.nav-links ul li{
-  padding-top: 5%;
+.navbar-nav{
     list-style: none;
-    display: inline-block;
-    padding: 0px 4px;
-    position: relative;
-    z-index: 6;
-}
-.nav-links ul li a{
-  padding-top: 5%;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 33px;
-    z-index: 6;
-}
-.nav-links ul li::after{
-    content: '';
-    width: 0;
-    height: 4px;
-    background: #0d44aa;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-    z-index: 6;
-}
-.nav-links ul li:hover::after{
-    width: 100%;}
-@media(max-width: 1000px){
-    .text-box h1{
-        font-size: 24px
-    }
-    .btn {
-        max-width: 100%;}
-    .btn2 {
-        max-width: 100%;
-    }
-    .nav-links ul li{
-      padding-top: 5%;
-        display: block;
-    }
-    .nav-links {
-      padding-top: 5%;
-        position:fixed;
-        background: #011237;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 6;
-        transition: 0.60s;
-    }
-    .image{}
-    .overlay{}
-}
-@media(max-width: 1000px) {
-    .text-box p {
-        font-size: 15px;
-    }
-
-    nav img {
-        position: absolute;
-        width: 65%;
-        top: 10px;
-        margin-left: 15%;
-
-    }
-
-    nav .fa {
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 24px;
-        cursor: pointer;
-
-    }
-    .nav-links ul {
-        padding: 30px;
-
-    }
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-
-@keyframes move-background {
-    from {
-        -webkit-transform: translate3d(0px, 0px, 0px);
-    }
-    to {
-        -webkit-transform: translate3d(1000px, 0px, 0px);
-    }
-}
-@-webkit-keyframes move-background {
-    from {
-        -webkit-transform: translate3d(0px, 0px, 0px);
-    }
-    to {
-        -webkit-transform: translate3d(1000px, 0px, 0px);
-    }
-}
-
-@-moz-keyframes move-background {
-    from {
-        -webkit-transform: translate3d(0px, 0px, 0px);
-    }
-    to {
-        -webkit-transform: translate3d(1000px, 0px, 0px);
-    }
-}
-
-@-webkit-keyframes move-background {
-
-    from {
-        -webkit-transform: translate3d(0px, 0px, 0px);
-    }
-    to {
-        -webkit-transform: translate3d(1000px, 0px, 0px);
-    }
-}
-/* I will keep this here temporarily, I want to see if I can improve on it later :)
-/*
-.background-container{
-    position: fixed;
-    top: 0;
-    left:0;
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
-}
-
-.stars {
-    background: #000000 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: block;
-    z-index: 0;
-    overflow: hidden;
-
-}
-
-.twinkling{
-    width:3500px;
-    background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
-    background-size: 1000px 1000px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-
-
-    -moz-animation:move-background 45s linear infinite;
-    -ms-animation:move-background 45s linear infinite;
-    -o-animation:move-background 45s linear infinite;
-    -webkit-animation:move-background 45s linear infinite;
-    animation:move-background 45s linear infinite;
-}
-*/
-
-.image {
-    padding-top: 8%;
-    position: absolute;
+.nav-item{
     width: 100%;
-    z-index: 2;
+}
+
+.nav-item:last-child{
+    margin-top: auto;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.nav-link:hover{
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+.link-text{
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-link svg{
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+
+.fa-primary{
+    color: #7e80ff
+}
+
+.fa-secondary{
+    color: #4967df;
+}
+
+.fa-primary,
+.fa-secondary {
+    transition: var(--transition-speed);
+}
+
+.logo{
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    font-size:1.5rem;
+    width: 100%;
+}
+
+.logo svg{
+    transform: rotate(0deg);
+    transition: var(--transition-speed)
+}
+
+.navbar:hover .logo svg{
+    transform: rotate(-180deg);
+}
+
+
+/*mobile*/
+@media only screen and (max-width: 600px){
+.navbar{
+    bottom: 0;
+    width: 100vw;
+    height:5rem;}
+    .logo{
+        display: none;}
+    .navbar-nav{
+        flex-direction: row;}
+    .nav-link{
+        justify-content: center;}
+    main{
+        margin: 0;}
+}
+
+/*desktop*/
+@media only screen and (min-width: 600px){
+    .navbar{
+        top: 0;
+        width: 5rem;
+        height: 100vh;}
+
+    .navbar:hover{
+        width: 16rem;}
+    .navbar:hover .link-text{
+        display: inline;
+        transition: opacity var(--transition-speed);}
+}
+/*
+.light {
+    --text-primary: #1f1f1f;
+    --text-secondary: #000000;
+    --bg-primary: #ffffff;
+    --bg-secondary: #e4e4e4;
+}
+
+.solar {
+    --text-primary: #576e75;
+    --text-secondary: #35535c;
+    --bg-primary: #fdf6e3;
+    --bg-secondary: #f5e5b8;
+}
+
+.theme-icon {
+    display: none;
+}
+
+.light #lightIcon {
     display: block;
 }
 
-.overlay{
-  padding-top: 8%;
-    position:absolute;
-    width:100%;
-    z-index:4;
-    display:block;
-}
-.btn:hover {
-    transition: 1s ease-in-out;
-}
-/* Leave this for later mobile compatitiblity.
-body {
-    padding: 25px;
-    background-color: white;
-    color: black;
-    font-size: 25px;
-}
-.dark-mode {
-    background-color: black;
-    color: white;
-}
+.solar #solarIcon {
+    display: block;
+]
 */
-.btn{
-    z-index:9;
-    position:fixed;
-    left: 35%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    color: white;
-    background-color: transparent;
-    height: 150px;
-    width: 500px;
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    outline: none;
-    font-size: 50px;
-    font-weight: 100;
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 0 0 0 rgba(255, 255, 255, 0);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+h1{
+    color: var(--text-secondary);
+    font-size: 3rem;
+    text-align: center;
 }
-.btn::after{
-    position: fixed;
-    left: 35%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index:8;
-    content:"";
-    width: 500px;
-    height: 150px;
-    background-color: transparent;
-    transition: transform 0.5s ease;
-}
-.btn:hover {
-    box-shadow: -10px 10px 25px 0 rgba(0, 76, 255, 0.5), -10px 10px 25px 0 rgba(201, 39, 2, 0.5);}
-.btn2:hover {
-    transition: 1s ease-in-out;
-}
-.btn2{
-    z-index:9;
-    position: fixed;
-    left: 65%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    color: white;
-    background-color: transparent;
-    height: 150px;
-    width: 500px;
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    outline: none;
-    font-size: 50px;
-    font-weight: 100;
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 0 0 0 rgba(255, 255, 255, 0);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.btn2::after{
-    position: fixed;
-    left: 65%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index:8;
-    content:"";
-    width: 500px;
-    height: 150px;
-    background-color: transparent;
-    transition: transform 0.5s ease;
-}
-.btn2:hover {
-    box-shadow: 10px 10px 25px 0 rgba(4, 68, 100, 0.5), 10px 10px 25px 0 rgba(18, 101, 210, 0.5);
-}
-@media(max-width: 1700px) {
-    .btn{
-        position: absolute;
-        left: 50%;
-        top: 70%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
-    .btn2{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
-}
+
