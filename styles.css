@@ -171,3 +171,10 @@ main{
     display: block;
 ]
 */
+
+h1{
+    color: var(--text-secondary);
+    font-size: 3rem;
+    text-align: center;
+}
+
