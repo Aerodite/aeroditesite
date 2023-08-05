@@ -6,6 +6,7 @@
     --bg-primary: #23232e;
     --bg-secondary: #141418;
     --bg-trinary: #3a3a52;
+    --bg-quaternary: #2e2e44;
     --transition-speed: 600ms;
 }
 
@@ -55,6 +56,7 @@ main{
 
 .nav-item:last-child{
     margin-top: auto;
+
 }
 
 .nav-link{
@@ -144,37 +146,35 @@ main{
         display: inline;
         transition: opacity var(--transition-speed);}
 }
-/*
-.light {
-    --text-primary: #1f1f1f;
-    --text-secondary: #000000;
-    --bg-primary: #ffffff;
-    --bg-secondary: #e4e4e4;
-}
-
-.solar {
-    --text-primary: #576e75;
-    --text-secondary: #35535c;
-    --bg-primary: #fdf6e3;
-    --bg-secondary: #f5e5b8;
-}
-
-.theme-icon {
-    display: none;
-}
-
-.light #lightIcon {
-    display: block;
-}
-
-.solar #solarIcon {
-    display: block;
-]
-*/
-
 h1{
     color: var(--text-secondary);
     font-size: 3rem;
     text-align: center;
 }
+.text-small{
+    font-size: 0.55rem;
+    margin-top:0;
+    padding-top: 0;
+}
 
+.status-Text{
+    text-align:center;
+    border-radius: 0.3rem;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin: 0 15rem;
+    box-shadow: 0 0 0.2rem rgba(0,0,0,0.5);
+    z-index:5;
+}
+.status-Container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0 15rem;
+    padding: 1rem;
+    background: var(--bg-quaternary);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.8rem rgba(0,0,0,0);
+    color: var(--text-secondary);
+    z-index:2;
+}
